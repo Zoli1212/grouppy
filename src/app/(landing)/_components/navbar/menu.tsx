@@ -15,8 +15,8 @@ const Menu = ({ orientation }: MenuProps) => {
     switch (orientation) {
         case "desktop":
             return (
-                <Card className="bg-themeGray border-themeGray bg-clip-padding backdrop--blur__safari backdrop-filter backdrop-blur-2xl bg-opacity-60 p-1 lg:flex hidden rounded-xl">
-                    <CardContent className="p-0 flex gap-2">
+                <Card className="bg-themeGray border-themeGray bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-60 p-1 lg:flex hidden rounded-xl">
+                    <CardContent className="p-0 flex gap-2 text-white">
                         {GROUPLE_CONSTANTS.landingPageMenu.map(
                             (menuItem: any) => (
                                 <Link
@@ -28,7 +28,7 @@ const Menu = ({ orientation }: MenuProps) => {
                                     className={cn(
                                         "rounded-xl flex gap-2 py-2 px-4 items-center",
                                         section == menuItem.path
-                                            ? "bg-[#09090B] border-[#27272A]"
+                                            ? "bg-[#09090B] border-[#27272A] text-yellow-500"
                                             : "",
                                     )}
                                     key={menuItem.id}
