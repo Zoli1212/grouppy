@@ -2,13 +2,13 @@
 const nextConfig = {
     reactStrictMode: false,
     images: {
-      remotePatterns: [
-        {
-          protocol: "https",
-          hostname: "ucarecdn.com",
-        },
-      ],
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "ucarecdn.com",
+            },
+        ],
     },
-  }
-  
-  export default nextConfig
+}
+
+export default nextConfig
