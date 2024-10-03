@@ -4,11 +4,11 @@ import DashboardSnippet from "./_components/dashboard-snippet"
 import CallToAction from "./_components/call-to-action"
 
 const PricingSection = dynamic(
-  () =>
-    import("./_components/pricing").then(
-      (component) => component.PricingSection,
-    ),
-  { ssr: true },
+    () =>
+        import("./_components/pricing").then(
+            (component) => component.PricingSection,
+        ),
+    { ssr: true },
 )
 
 export default function Home() {
