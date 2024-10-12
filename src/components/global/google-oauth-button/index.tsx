@@ -20,12 +20,12 @@ export const GoogleAuthButton = ({ method }: GoogleAuthButtonProps) => {
                 : {
                       onClick: () => signUpWith("oauth_google"),
                   })}
-            className="w-full rounded-2xl flex gap-3 bg-themeBlack border-themeGray"
+            className="w-full rounded-2xl flex gap-3 bg-themeBlack border-themeGray hover:bg-gray-500"
             variant="outline"
         >
             <Loader loading={false}>
                 <Google />
-                Google
+                <span className="text-red-500">Google</span> 
             </Loader>
         </Button>
     )
