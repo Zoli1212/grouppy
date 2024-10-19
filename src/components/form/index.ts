@@ -11,11 +11,10 @@ import {
     onUpDateGroupSettings,
     onUpdateGroupGallery,
 } from "@/actions/groups"
-import { AddCustomDomainSchema } from "@/components/form/domain/schema"
-import { GroupSettingsSchema } from "@/components/form/group-settings/schema"
-import { SendNewMessageSchema } from "@/components/form/huddles/schema"
-import { UpdateGallerySchema } from "@/components/form/media-gallery/schema"
-
+import { AddCustomDomainSchema } from "@/components/forms/domain/schema"
+import { GroupSettingsSchema } from "@/components/forms/group-settings/schema"
+import { SendNewMessageSchema } from "@/components/forms/huddles/schema"
+import { UpdateGallerySchema } from "@/components/forms/media-gallery/schema"
 import { upload } from "@/lib/uploadcare"
 import { supabaseClient, validateURLString } from "@/lib/utils"
 import { onChat } from "@/redux/slices/chats-slices"

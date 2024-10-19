@@ -1,4 +1,5 @@
-import GroupSettingsForm from "@/components/forms/group-settings"
+import GroupSettingsForm from "@/components/form/group-settings"
+
 
 type Props = {}
 
