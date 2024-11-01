@@ -9,12 +9,9 @@ import {
 import AboutGroup from "../_components/about"
 import GroupSideWidget from "@/components/global/group-side-widget"
 
-
 type Params = Promise<{ groupid: string }>
 
-
-const Page = async ({ params }: { params: Params}) => {
-
+const Page = async ({ params }: { params: Params }) => {
   const { groupid } = await params
   const query = new QueryClient()
 

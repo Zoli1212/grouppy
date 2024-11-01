@@ -6,21 +6,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { User } from "lucide-react"
 import { redirect } from "next/navigation"
 
-
-type Params = Promise<{ [affiliate: string]: string }>;
-const GroupCreatePage = async ({
-  searchParams,
-}: {
-  searchParams: Params
-}) => {
-
+type Params = Promise<{ [affiliate: string]: string }>
+const GroupCreatePage = async ({ searchParams }: { searchParams: Params }) => {
   const user = await onAuthenticatedUser()
 
   const { affiliate } = await searchParams
 
   const affiliate2 = await onGetAffiliateInfo(affiliate)
 
-  console.log(user, 'USER')
+  console.log(user, "USER")
 
   if (!user || !user.id) redirect("/sign-in")
 

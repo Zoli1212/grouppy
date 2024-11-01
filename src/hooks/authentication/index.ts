@@ -185,7 +185,7 @@ export const useGoogleAuth = () => {
   const { signIn, isLoaded: LoadedSignIn } = useSignIn()
   const { signUp, isLoaded: LoadedSignUp } = useSignUp()
 
-  const signInWith = async(strategy: OAuthStrategy) => {
+  const signInWith = async (strategy: OAuthStrategy) => {
     if (!LoadedSignIn) return
     try {
       return await signIn.authenticateWithRedirect({
@@ -198,7 +198,7 @@ export const useGoogleAuth = () => {
     }
   }
 
-  const signUpWith = async(strategy: OAuthStrategy) => {
+  const signUpWith = async (strategy: OAuthStrategy) => {
     if (!LoadedSignUp) return
     try {
       return await signUp.authenticateWithRedirect({

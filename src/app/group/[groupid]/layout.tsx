@@ -16,15 +16,16 @@ import { redirect } from "next/navigation"
 import { Navbar } from "../_components/navbar"
 import MobileNav from "../_components/mobile-nav"
 
-
-
 type Params = Promise<{ groupid: string }>
 
-
-
-const GroupLayout = async ({ children, params }: { params: Params, children: React.ReactNode}) => {
-
-  const { groupid} = await params
+const GroupLayout = async ({
+  children,
+  params,
+}: {
+  params: Params
+  children: React.ReactNode
+}) => {
+  const { groupid } = await params
   const query = new QueryClient()
 
   const user = await onAuthenticatedUser()

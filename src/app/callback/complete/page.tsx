@@ -1,7 +1,7 @@
 import { onSignUpUser } from "@/actions/auth"
-import { currentUser } from '@clerk/nextjs/server'
+import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
-import { auth } from '@clerk/nextjs/server'
+import { auth } from "@clerk/nextjs/server"
 
 const CompleteOAuthAfterCallback = async () => {
   const { userId } = await auth()

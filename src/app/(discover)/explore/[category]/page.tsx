@@ -8,10 +8,7 @@ import ExplorePageContent from "../_components/explore-content"
 
 type Params = Promise<{ category: string }>
 
-const ExploreCategoryPage = async ({
-  params
-}: { params: Params}) => {
-
+const ExploreCategoryPage = async ({ params }: { params: Params }) => {
   const { category } = await params
   const query = new QueryClient()
 

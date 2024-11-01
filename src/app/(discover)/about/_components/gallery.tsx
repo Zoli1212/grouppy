@@ -1,4 +1,3 @@
-
 import MediaGalleryForm from "@/components/forms/media-gallery"
 import { GlassModal } from "@/components/global/glass-modal"
 import { Card, CardContent } from "@/components/ui/card"

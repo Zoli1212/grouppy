@@ -298,7 +298,7 @@ export const useGroupSettings = (groupid: string) => {
     onDescription,
   }
 }
-export const  useGroupList = (query: string) => {
+export const useGroupList = (query: string) => {
   const { data } = useQuery({
     queryKey: [query],
   })
