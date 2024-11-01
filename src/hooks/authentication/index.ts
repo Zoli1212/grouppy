@@ -1,6 +1,6 @@
 import { onSignUpUser } from "@/actions/auth"
-import { SignInSchema } from "@/components/form/sign-in/schema"
-import { SignUpSchema } from "@/components/form/sign-up/schema"
+import { SignInSchema } from "@/components/forms/sign-in/schema"
+import { SignUpSchema } from "@/components/forms/sign-up/schema"
 import { useSignIn, useSignUp } from "@clerk/nextjs"
 import { OAuthStrategy } from "@clerk/types"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -185,10 +185,10 @@ export const useGoogleAuth = () => {
   const { signIn, isLoaded: LoadedSignIn } = useSignIn()
   const { signUp, isLoaded: LoadedSignUp } = useSignUp()
 
-  const signInWith = (strategy: OAuthStrategy) => {
+  const signInWith = async(strategy: OAuthStrategy) => {
     if (!LoadedSignIn) return
     try {
-      return signIn.authenticateWithRedirect({
+      return await signIn.authenticateWithRedirect({
         strategy,
         redirectUrl: "/callback",
         redirectUrlComplete: "/callback/sign-in",
@@ -198,10 +198,10 @@ export const useGoogleAuth = () => {
     }
   }
 
-  const signUpWith = (strategy: OAuthStrategy) => {
+  const signUpWith = async(strategy: OAuthStrategy) => {
     if (!LoadedSignUp) return
     try {
-      return signUp.authenticateWithRedirect({
+      return await signUp.authenticateWithRedirect({
         strategy,
         redirectUrl: "/callback",
         redirectUrlComplete: "/callback/complete",

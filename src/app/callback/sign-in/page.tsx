@@ -16,7 +16,7 @@ const CompleteSigIn = async () => {
     )
 
   if (authenticated.status !== 200) {
-    redirect("/sign-in")
+    redirect("/sign-up")
   }
 }
 

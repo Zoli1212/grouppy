@@ -8,6 +8,7 @@ import {
   SocialMedia,
   Tech,
 } from "../icons"
+import { JSX } from "react"
 
 export type GroupListProps = {
   id: string
@@ -37,9 +38,9 @@ export const GROUP_LIST: GroupListProps[] = [
   },
   {
     id: "3",
-    label: "Buisness",
+    label: "Business",
     icon: <Buisness />,
-    path: "buisness",
+    path: "business",
   },
   {
     id: "4",

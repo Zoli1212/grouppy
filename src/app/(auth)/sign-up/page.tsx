@@ -1,4 +1,4 @@
-import SignUpForm from "@/components/form/sign-up"
+import SignUpForm from "@/components/forms/sign-up"
 import { GoogleAuthButton } from "@/components/global/google-oauth-button"
 import { Separator } from "@/components/ui/separator"
 

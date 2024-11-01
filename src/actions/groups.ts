@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache"
 import { v4 as uuidv4 } from "uuid"
 import { z } from "zod"
 import { onAuthenticatedUser } from "./auth"
-import { CreateGroupSchema } from "@/components/form/create-group/schema"
+import { CreateGroupSchema } from "@/components/forms/create-group/schema"
 
 export const onGetAffiliateInfo = async (id: string) => {
   try {
