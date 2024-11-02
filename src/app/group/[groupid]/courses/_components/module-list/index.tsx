@@ -8,6 +8,7 @@ import { useCourseModule } from "@/hooks/courses"
 import { EmptyCircle, PurpleCheck } from "@/icons"
 import { Plus } from "lucide-react"
 import Link from "next/link"
+import { RefObject } from "react"
 import { v4 } from "uuid"
 
 type Props = {
@@ -45,7 +46,7 @@ const CourseModuleList = ({ courseId, groupid }: Props) => {
         data.modules?.map((module) => (
           <GlobalAccordion
             edit={edit}
-            ref={triggerRef}
+            ref={triggerRef as RefObject<HTMLButtonElement>}
             editable={
               <Input
                 ref={inputRef}

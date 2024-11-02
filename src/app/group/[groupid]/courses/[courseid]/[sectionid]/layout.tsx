@@ -6,27 +6,25 @@ import {
 } from "@tanstack/react-query"
 import SectionNavBar from "./_components/section-navbar"
 
-type CourseContentPageLayout = {
+type Params = {
+  params: Promise<{ sectionid: string}>,
   children: React.ReactNode
-  params: {
-    sectionid: string
-  }
 }
 
-const CourseContentPageLayout = async ({
-  children,
-  params,
-}: CourseContentPageLayout) => {
+const CourseContentPageLayout = async ({ params, children }: Params) => {
+
+  const { sectionid} = await params;
+
   const client = new QueryClient()
 
   await client.prefetchQuery({
     queryKey: ["section-info"],
-    queryFn: () => onGetSectionInfo(params.sectionid),
+    queryFn: () => onGetSectionInfo(sectionid),
   })
 
   return (
     <HydrationBoundary state={dehydrate(client)}>
-      <SectionNavBar sectionid={params.sectionid} />
+      <SectionNavBar sectionid={sectionid} />
       {children}
     </HydrationBoundary>
   )
