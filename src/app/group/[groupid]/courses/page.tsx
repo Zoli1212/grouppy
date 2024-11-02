@@ -7,13 +7,9 @@ import {
 } from "@tanstack/react-query"
 import CourseList from "./_components/course-list"
 
-
-type Params = Promise<{ groupid: string}>
-
-
+type Params = Promise<{ groupid: string }>
 
 const CoursesPage = async ({ params }: { params: Params }) => {
-
   const { groupid } = await params
   const client = new QueryClient()
 

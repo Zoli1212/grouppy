@@ -7,13 +7,12 @@ import {
 import SectionNavBar from "./_components/section-navbar"
 
 type Params = {
-  params: Promise<{ sectionid: string}>,
+  params: Promise<{ sectionid: string }>
   children: React.ReactNode
 }
 
 const CourseContentPageLayout = async ({ params, children }: Params) => {
-
-  const { sectionid} = await params;
+  const { sectionid } = await params
 
   const client = new QueryClient()
 

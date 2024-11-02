@@ -19,8 +19,7 @@ type Props = {
 }
 
 const GroupChannelPage = async ({ params }: Props) => {
-
-  const { channelid, groupid } = await params;
+  const { channelid, groupid } = await params
   const client = new QueryClient()
   const user = await currentUser()
   const authUser = await onAuthenticatedUser()
