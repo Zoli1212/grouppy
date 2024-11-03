@@ -9,7 +9,7 @@ type Props = {
   name: "stripe"
   logo: string
   title: string
-  descrioption: string
+  description: string
   groupid: string
   connections: {
     [key in "stripe"]: boolean
@@ -20,7 +20,7 @@ const IntegrationTrigger = ({
   name,
   logo,
   title,
-  descrioption,
+  description,
   connections,
   groupid,
 }: Props) => {
@@ -29,7 +29,7 @@ const IntegrationTrigger = ({
       title={title}
       type="Integration"
       logo={logo}
-      description={descrioption}
+      description={description}
       trigger={
         <Card className="px-3 py-2 cursor-pointer flex gap-2 bg-themeBlack border-themeGray">
           <CloudIcon />
