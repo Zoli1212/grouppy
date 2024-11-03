@@ -1,5 +1,5 @@
 import GroupSettingsForm from "@/components/forms/group-settings"
-}
+
 
 type Props = {
   params: Promise<{ groupid: string }>
