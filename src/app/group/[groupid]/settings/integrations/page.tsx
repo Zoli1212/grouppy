@@ -10,7 +10,6 @@ type Params = Promise<{ groupid: string }>
 const IntegrationsPage = async ({ params }: { params: Params }) => {
   const { groupid } = await params
 
-
   const payment = await onGetStripeIntegration()
   const connections = {
     stripe: payment ? true : false,
