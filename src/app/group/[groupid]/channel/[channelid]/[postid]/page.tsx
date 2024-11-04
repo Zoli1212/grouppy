@@ -15,10 +15,8 @@ type Props = {
   params: Promise<{ postid: string }>
 }
 
-
-
-  const PostPage = async ({ params }: Props) => {
-    const { postid } = await params
+const PostPage = async ({ params }: Props) => {
+  const { postid } = await params
   const client = new QueryClient()
 
   await client.prefetchQuery({

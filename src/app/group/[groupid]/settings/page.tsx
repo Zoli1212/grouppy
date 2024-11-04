@@ -1,15 +1,11 @@
 import GroupSettingsForm from "@/components/forms/group-settings"
 
-
 type Props = {
   params: Promise<{ groupid: string }>
 }
 
-
-
-  const GroupSettingsPage = async ({ params }: Props) => {
-    const { groupid } = await params
-
+const GroupSettingsPage = async ({ params }: Props) => {
+  const { groupid } = await params
 
   return (
     <div className="flex flex-col w-full h-full gap-10 px-16 py-10 overflow-auto">

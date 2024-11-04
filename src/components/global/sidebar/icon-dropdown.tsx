@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { ICON_LIST } from "@/constants/icons"
 
 type Props = {
-  ref: React.RefObject<HTMLButtonElement>
+  ref: React.RefObject<HTMLButtonElement | null>
   icon: string
   page?: string
   channelid: string

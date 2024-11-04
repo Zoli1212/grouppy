@@ -10,16 +10,12 @@ import {
 import { User } from "lucide-react"
 import { ChatWindow } from "../_components/chat"
 
-
-
 type Props = {
   params: Promise<{ chatid: string }>
 }
 
-
-
-  const MemberChatPage = async ({ params }: Props) => {
-    const { chatid } = await params
+const MemberChatPage = async ({ params }: Props) => {
+  const { chatid } = await params
 
   const query = new QueryClient()
   const member = await onGetUserFromMembership(chatid)

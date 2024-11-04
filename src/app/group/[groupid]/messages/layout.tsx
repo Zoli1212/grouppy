@@ -2,15 +2,12 @@ import GlassSheet from "@/components/global/glass-sheet"
 import { Menu } from "lucide-react"
 import { GroupChatMenu } from "./_components/chat-menu"
 
-
-
 type HuddlesLayoutProps = {
   children: React.ReactNode
   params: Promise<{ groupid: string }>
 }
 
 const HuddlesLayout = async ({ children, params }: HuddlesLayoutProps) => {
-
   const { groupid } = await params
   return (
     <div className="grid grid-cols-1 lg:grid-cols-6 flex-1 h-0">

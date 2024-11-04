@@ -5,10 +5,8 @@ type Props = {
   params: Promise<{ groupid: string }>
 }
 
-
-
-  const SubscriptionPage = async ({ params }: Props) => {
-    const { groupid } = await params
+const SubscriptionPage = async ({ params }: Props) => {
+  const { groupid } = await params
 
   return (
     <div className="p-10 flex flex-col gap-y-10">
